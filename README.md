@@ -1,4 +1,4 @@
-🌍 TravelExplorer – Travel & Tourism Website
+## 🌍 TravelExplorer – Travel & Tourism Website
 
 A dynamic Travel & Tourism website developed using **PHP and MySQL**. The project allows users to explore tourist destinations, view destination details with image sliders, and submit travel enquiries. It includes an admin panel for managing destinations and customer enquiries.
 
