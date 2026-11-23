@@ -1,0 +1,267 @@
+/* Global Styles */
+:root {
+    --primary-color: #003366;
+    --secondary-color: #0066aa;
+    --accent-color: #ffc107;
+    --dark-bg: #1e293b;
+    --light-bg: #f4f7fb;
+    --card-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--light-bg);
+    color: #333333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Custom Navigation Bar */
+.custom-navbar {
+    background-color: var(--primary-color) !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+    padding: 12px 0;
+}
+
+.custom-navbar .navbar-brand {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.5rem;
+    letter-spacing: 0.5px;
+}
+
+.custom-navbar .brand-icon {
+    font-size: 1.6rem;
+    color: var(--accent-color);
+}
+
+.custom-navbar .brand-highlight {
+    color: var(--accent-color);
+}
+
+.custom-navbar .nav-link {
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-weight: 500;
+    margin: 0 8px;
+    padding: 6px 12px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.custom-navbar .nav-link:hover,
+.custom-navbar .nav-link.active {
+    color: var(--accent-color) !important;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.social-icons .social-link {
+    color: #ffffff;
+    margin-right: 12px;
+    font-size: 1.1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.15);
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s, transform 0.2s;
+}
+
+.social-icons .social-link:hover {
+    background: var(--accent-color);
+    color: #000;
+    transform: translateY(-2px);
+}
+
+.admin-portal-btn {
+    border-radius: 20px;
+    padding: 4px 14px;
+    font-size: 0.85rem;
+}
+
+/* Hero Section */
+.hero {
+    height: 480px;
+    background: linear-gradient(rgba(0, 30, 60, 0.65), rgba(0, 30, 60, 0.7)),
+                url("images/goa.jpg") center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    margin-bottom: 25px;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Destination Cards (Country Options) */
+.destination-card {
+    background: #ffffff;
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.destination-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.14);
+}
+
+.destination-card .card-img-wrapper {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+    background-color: #e9ecef;
+}
+
+.destination-card .card-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.destination-card:hover .card-img-wrapper img {
+    transform: scale(1.06);
+}
+
+.destination-card .country-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(0, 51, 102, 0.85);
+    color: #fff;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    backdrop-filter: blur(4px);
+}
+
+.destination-card .price-tag {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    background: rgba(0, 0, 0, 0.75);
+    color: var(--accent-color);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.destination-card .card-body {
+    padding: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.destination-card .card-title {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-bottom: 0.6rem;
+}
+
+.destination-card .card-text {
+    color: #6c757d;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    flex-grow: 1;
+    margin-bottom: 1.2rem;
+}
+
+/* Primary Button Styling */
+.btn-primary-custom {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    border: none;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary-custom:hover {
+    background-color: var(--secondary-color);
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 102, 170, 0.3);
+}
+
+/* Destination Details Page */
+.details-carousel {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    margin-bottom: 2rem;
+}
+
+.details-carousel .carousel-item {
+    height: 420px;
+    background-color: #222;
+}
+
+.details-carousel .carousel-item img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.info-card {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
+}
+
+.enquiry-card {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
+    border-top: 5px solid var(--primary-color);
+}
+
+.info-badge-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.info-badge-item i {
+    width: 32px;
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--primary-color);
+    color: #ffffff;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
